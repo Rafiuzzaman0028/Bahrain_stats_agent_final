@@ -6,19 +6,43 @@ Rule-based NLU (intent classification + year extraction) + optional safe LLM ref
 
 Behavior:
  - Rule-based classification and year extraction unchanged.
+ - If SEARCH_API_KEY or BING_SUBSCRIPTION_KEY is set, a lightweight web search is performed
+   when the rule-based agent can't answer; snippets are passed to the LLM.
  - LLM refinement used only when OPENAI_API_KEY is set and 'openai' package is importable.
- - Any LLM error is logged and the original rule-based answer is returned.
+ - Any LLM or search error is logged and the original rule-based answer is returned.
  - Non-invasive: does not modify other modules or files.
 """
-
-from typing import Optional
+from typing import Optional, List
 import re
 import os
 import logging
 from dotenv import load_dotenv
 
-# Load .env (optional) for OPENAI_API_KEY, OPENAI_MODEL, etc.
+# external dependency for HTTP calls; safe if not used
+import requests
+
+# Load .env (optional) for OPENAI_API_KEY, OPENAI_MODEL, SEARCH_API_KEY, etc.
 load_dotenv()
+
+# -------------------------
+# Logging
+# -------------------------
+LOG = logging.getLogger(__name__)
+LOG.addHandler(logging.NullHandler())
+
+# -------------------------
+# Config (declare before use)
+# -------------------------
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL") or "gpt-5.1"
+OPENAI_TIMEOUT = float(os.getenv("OPENAI_TIMEOUT", "10"))  # seconds
+LLM_MIN_WORDS = int(os.getenv("LLM_MIN_WORDS", "5"))  # skip LLM for tiny answers
+
+# Search config: prefer SerpAPI if SEARCH_API_KEY present; otherwise allow Bing/Azure
+SEARCH_API_KEY = os.getenv("SEARCH_API_KEY")
+SEARCH_ENGINE = os.getenv("SEARCH_ENGINE", "serpapi").lower()  # 'serpapi' or 'bing'
+BING_SUBSCRIPTION_KEY = os.getenv("BING_SUBSCRIPTION_KEY")
+BING_ENDPOINT = os.getenv("BING_ENDPOINT", "https://api.bing.microsoft.com/v7.0/search")
 
 # -------------------------
 # Rule-based NLU (unchanged)
@@ -65,6 +89,17 @@ def classify_intent(question: str) -> str:
         return "density"
     return "labour_overview" if "unemployment" in q or "employment" in q else "unknown"
 
+
+def extract_year(question: str, default_year: Optional[int] = None) -> Optional[int]:
+    years = re.findall(r"\b(19[0-9]{2}|20[0-9]{2}|2100)\b", question or "")
+    if years:
+        try:
+            return int(years[0])
+        except Exception:
+            pass
+    return default_year
+
+
 # -------- Hybrid intent fallback (non-destructive) ----------
 def classify_intent_hybrid(question: str, use_llm_fallback: bool = True) -> str:
     """
@@ -83,7 +118,15 @@ def classify_intent_hybrid(question: str, use_llm_fallback: bool = True) -> str:
         return rule_intent
 
     # If LLM fallback disabled or unavailable, return unknown
-    if not use_llm_fallback or not OPENAI_API_KEY or not _OPENAI_AVAILABLE:
+    if not use_llm_fallback or not OPENAI_API_KEY:
+        return "unknown"
+
+    # Lazy-detect OpenAI availability here (keeps module import light)
+    try:
+        import openai  # type: ignore
+        _OPENAI_AVAILABLE = True
+    except Exception:
+        LOG.debug("openai package not importable; LLM disabled for classify_intent_hybrid.")
         return "unknown"
 
     # Build a tiny deterministic prompt asking for a single label
@@ -95,30 +138,38 @@ def classify_intent_hybrid(question: str, use_llm_fallback: bool = True) -> str:
     messages = [{"role": "user", "content": prompt}]
 
     try:
-        # prefer old-style if available (keeps compatibility)
-        if _have_old_chat:
+        # try old-style ChatCompletion if present
+        if hasattr(openai, "ChatCompletion"):
             openai.api_key = OPENAI_API_KEY
-            resp = _call_openai_old(messages, model=OPENAI_MODEL, max_tokens=8, temperature=0.0)
+            resp = openai.ChatCompletion.create(
+                model=OPENAI_MODEL, messages=messages, max_tokens=8, temperature=0.0, request_timeout=OPENAI_TIMEOUT
+            )
             label = None
             if resp and "choices" in resp and len(resp["choices"]) > 0:
                 label = resp["choices"][0].get("message", {}).get("content", "").strip().split()[0]
-        elif _have_new_client and _new_client_cls is not None:
-            resp2 = _call_openai_new(messages, model=OPENAI_MODEL, max_tokens=8, temperature=0.0)
-            choices = getattr(resp2, "choices", None) or resp2.get("choices", None)
-            label = None
-            if choices and len(choices) > 0:
-                first = choices[0]
-                if isinstance(first, dict):
-                    label = first.get("message", {}).get("content", "").strip().split()[0]
-                elif hasattr(first, "message") and hasattr(first.message, "content"):
-                    label = first.message.content.strip().split()[0]
         else:
-            return "unknown"
+            # try new-style client if exposed
+            try:
+                from openai import OpenAI as _OpenAIClass  # type: ignore
+                client = _OpenAIClass(api_key=OPENAI_API_KEY)
+                resp2 = client.chat.completions.create(
+                    model=OPENAI_MODEL, messages=messages, max_tokens=8, temperature=0.0
+                )
+                choices = getattr(resp2, "choices", None) or (resp2.get("choices") if isinstance(resp2, dict) else None)
+                label = None
+                if choices and len(choices) > 0:
+                    first = choices[0]
+                    if isinstance(first, dict):
+                        label = first.get("message", {}).get("content", "").strip().split()[0]
+                    elif hasattr(first, "message") and hasattr(first.message, "content"):
+                        label = first.message.content.strip().split()[0]
+            except Exception:
+                LOG.debug("No compatible OpenAI client found for classify_intent_hybrid.", exc_info=True)
+                return "unknown"
 
         # Normalize and validate label
         if label:
             label = label.strip().strip('"').strip("'").lower()
-            # try to match label to known intents (allow small variations)
             for known in INTENT_KEYWORDS.keys():
                 if label == known or label.replace("-", "_") == known:
                     return known
@@ -128,45 +179,86 @@ def classify_intent_hybrid(question: str, use_llm_fallback: bool = True) -> str:
         return "unknown"
 
 
-def extract_year(question: str, default_year: Optional[int] = None) -> Optional[int]:
-    years = re.findall(r"\b(19[0-9]{2}|20[0-9]{2}|2100)\b", question or "")
-    if years:
+# -------------------------
+# Helpers: web search snippets
+# -------------------------
+def search_web_snippets(query: str, num_results: int = 3) -> Optional[str]:
+    """
+    Return a short concatenated string of top search snippets (title + snippet + link).
+    Supports SerpAPI (via SEARCH_API_KEY) and Bing (via BING_SUBSCRIPTION_KEY).
+    Returns None on failure or if no API key available.
+    """
+    # Prefer SerpAPI if SEARCH_API_KEY present and engine configured
+    if SEARCH_API_KEY and SEARCH_ENGINE == "serpapi":
         try:
-            return int(years[0])
+            params = {
+                "q": query,
+                "api_key": SEARCH_API_KEY,
+                "engine": "google",
+                "num": num_results,
+            }
+            r = requests.get("https://serpapi.com/search.json", params=params, timeout=6)
+            r.raise_for_status()
+            data = r.json()
+            snippets = []
+            for item in data.get("organic_results", [])[:num_results]:
+                title = item.get("title", "").strip()
+                snippet = item.get("snippet") or item.get("rich_snippet", {}).get("top", {}).get("text", "")
+                link = item.get("link", "")
+                if title or snippet or link:
+                    snippets.append(f"{title}\n{snippet}\n{link}")
+            if not snippets:
+                return None
+            return "\n\n".join(snippets)
         except Exception:
-            pass
-    return default_year
+            LOG.exception("SerpAPI search failed")
+            return None
+
+    # Fallback to Bing (Azure) if key present
+    if BING_SUBSCRIPTION_KEY:
+        try:
+            headers = {"Ocp-Apim-Subscription-Key": BING_SUBSCRIPTION_KEY}
+            params = {"q": query, "count": num_results, "textDecorations": False, "textFormat": "Raw"}
+            r = requests.get(BING_ENDPOINT, headers=headers, params=params, timeout=6)
+            r.raise_for_status()
+            data = r.json()
+            snippets = []
+            for item in data.get("webPages", {}).get("value", [])[:num_results]:
+                title = item.get("name", "").strip()
+                snippet = item.get("snippet", "")
+                link = item.get("url", "")
+                if title or snippet or link:
+                    snippets.append(f"{title}\n{snippet}\n{link}")
+            if not snippets:
+                return None
+            return "\n\n".join(snippets)
+        except Exception:
+            LOG.exception("Bing search failed")
+            return None
+
+    # No search key available
+    return None
+
 
 # -------------------------
-# LLM refinement (safe)
+# OpenAI compatibility wrappers
 # -------------------------
-LOG = logging.getLogger(__name__)
-LOG.addHandler(logging.NullHandler())
-
-# Config from env (optional)
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL")
-OPENAI_TIMEOUT = float(os.getenv("OPENAI_TIMEOUT", "10"))  # seconds
-LLM_MIN_WORDS = int(os.getenv("LLM_MIN_WORDS", "5"))  # skip LLM for tiny answers
-
-# Try to import openai (optional)
+# Try to import openai once; presence is checked at call-time as well
 try:
-    import openai
+    import openai  # type: ignore
     _OPENAI_AVAILABLE = True
 except Exception:
     openai = None
     _OPENAI_AVAILABLE = False
     LOG.debug("openai package not importable; LLM disabled.")
 
-# New-style client detection (some installs provide OpenAI client class)
+# Detect new client class if possible
 _have_old_chat = False
 _have_new_client = False
 _new_client_cls = None
 
 if _OPENAI_AVAILABLE:
-    # old style ChatCompletion
     _have_old_chat = hasattr(openai, "ChatCompletion")
-    # try to detect new client class
     try:
         from openai import OpenAI as _OpenAI  # type: ignore
         _have_new_client = True
@@ -174,14 +266,15 @@ if _OPENAI_AVAILABLE:
     except Exception:
         _have_new_client = False
 
+
 def _call_openai_old(messages, model, timeout=OPENAI_TIMEOUT, max_tokens=400, temperature=0.2):
     """Old style openai.ChatCompletion.create call wrapper."""
-    # configure key
     openai.api_key = OPENAI_API_KEY
     resp = openai.ChatCompletion.create(
         model=model, messages=messages, max_tokens=max_tokens, temperature=temperature, request_timeout=timeout
     )
     return resp
+
 
 def _call_openai_new(messages, model, timeout=OPENAI_TIMEOUT, max_tokens=400, temperature=0.2):
     """New-style OpenAI client wrapper."""
@@ -192,7 +285,10 @@ def _call_openai_new(messages, model, timeout=OPENAI_TIMEOUT, max_tokens=400, te
     )
     return resp
 
-# --- replace summarize_with_llm implementation with this block ---
+
+# -------------------------
+# LLM refinement (safe)
+# -------------------------
 def summarize_with_llm(text: str, system_prompt: Optional[str] = None, max_tokens: int = 400) -> str:
     """
     Use new OpenAI client if available; fall back to older API shapes if present.
@@ -220,37 +316,25 @@ def summarize_with_llm(text: str, system_prompt: Optional[str] = None, max_token
 
         # Prefer new-style client (openai.OpenAI)
         try:
-            from openai import OpenAI as _OpenAIClass  # may raise
-            client = _OpenAIClass(api_key=OPENAI_API_KEY)
-            resp = client.chat.completions.create(
-                model=OPENAI_MODEL,
-                messages=messages,
-                max_tokens=max_tokens,
-                temperature=0.2,
-            )
-            # Many SDKs return dict-like or object-like shapes:
-            choices = getattr(resp, "choices", None) or (resp.get("choices") if isinstance(resp, dict) else None)
-            if choices and len(choices) > 0:
-                first = choices[0]
-                if hasattr(first, "message") and hasattr(first.message, "content"):
-                    return first.message.content.strip()
-                if isinstance(first, dict):
-                    msg = first.get("message", {})
-                    if isinstance(msg, dict) and "content" in msg:
-                        return msg["content"].strip()
+            if _have_new_client and _new_client_cls is not None:
+                resp = _call_openai_new(messages, model=OPENAI_MODEL, max_tokens=max_tokens, temperature=0.2)
+                choices = getattr(resp, "choices", None) or (resp.get("choices") if isinstance(resp, dict) else None)
+                if choices and len(choices) > 0:
+                    first = choices[0]
+                    if hasattr(first, "message") and hasattr(first.message, "content"):
+                        return first.message.content.strip()
+                    if isinstance(first, dict):
+                        msg = first.get("message", {})
+                        if isinstance(msg, dict) and "content" in msg:
+                            return msg["content"].strip()
         except Exception:
             LOG.debug("New-style OpenAI client not available or failed; will try old-style if present.", exc_info=True)
 
-        # Try old-style ChatCompletion only if installed and available (but skip for openai>=1.0)
+        # Try old-style ChatCompletion if installed and available
         try:
-            if hasattr(openai, "ChatCompletion"):
+            if _have_old_chat and openai is not None:
                 openai.api_key = OPENAI_API_KEY
-                resp2 = openai.ChatCompletion.create(
-                    model=OPENAI_MODEL,
-                    messages=messages,
-                    max_tokens=max_tokens,
-                    temperature=0.2,
-                )
+                resp2 = _call_openai_old(messages, model=OPENAI_MODEL, max_tokens=max_tokens, temperature=0.2)
                 if resp2 and "choices" in resp2 and len(resp2["choices"]) > 0:
                     content = resp2["choices"][0].get("message", {}).get("content")
                     if content:
@@ -265,11 +349,10 @@ def summarize_with_llm(text: str, system_prompt: Optional[str] = None, max_token
         LOG.exception("Unexpected error in summarize_with_llm; returning original text.")
         return text
 
-# -------------------------
-# Public helper combining agent + LLM (non-invasive)
-# -------------------------
-# ---------- Replace route_and_answer + llm_fallback_answer with this block ----------
 
+# -------------------------
+# Heuristic: canned help detection
+# -------------------------
 def _is_canned_help(text: Optional[str]) -> bool:
     """
     Heuristic to detect the agent's canned help / example message.
@@ -279,7 +362,6 @@ def _is_canned_help(text: Optional[str]) -> bool:
     if not text:
         return True
     t = text.strip().lower()
-    # common canned prefixes used by agent
     canned_prefixes = [
         "i can help with the following",
         "examples:",
@@ -288,18 +370,19 @@ def _is_canned_help(text: Optional[str]) -> bool:
         "ask about"
     ]
     for p in canned_prefixes:
-        if p in t[:120]:  # check beginning chunk
+        if p in t[:120]:
             return True
-    # if it's short and obviously a menu-like output (few lines starting with dashes)
     lines = [l.strip() for l in text.splitlines() if l.strip()]
     if len(lines) >= 3 and all(l.startswith(("-", "*")) or l.endswith("?") or len(l) < 80 for l in lines[:4]):
         return True
-    # fallback: if the text is extremely short and generic
     if len(text.split()) <= 6 and any(k in t for k in ("help", "examples", "summarize", "overview")):
         return True
     return False
 
 
+# -------------------------
+# Public helper combining agent + LLM (non-invasive)
+# -------------------------
 def route_and_answer(agent, user_text: str, use_llm: bool = True) -> str:
     """
     Produce an answer via the agent, optionally refine it with LLM.
@@ -313,7 +396,6 @@ def route_and_answer(agent, user_text: str, use_llm: bool = True) -> str:
         raw = agent.answer_question(user_text)
     except Exception as e:
         LOG.exception("agent.answer_question raised an exception; falling back to LLM: %s", e)
-        # fall through to LLM fallback
 
     # If agent returned nothing meaningful or returned a canned help message -> fallback
     if raw is None or (isinstance(raw, str) and (raw.strip() == "" or _is_canned_help(raw))):
@@ -333,25 +415,39 @@ def route_and_answer(agent, user_text: str, use_llm: bool = True) -> str:
         return raw
 
 
+# -------------------------
+# LLM fallback (now with optional web snippets)
+# -------------------------
 def llm_fallback_answer(user_text: str, agent_text: Optional[str] = None) -> str:
     """
     Produce a direct ChatGPT answer when the rule-based agent can't answer.
     - If possible, include brief context (agent_text) for better continuity.
+    - If SEARCH_API_KEY or BING_SUBSCRIPTION_KEY is configured, perform a lightweight web search and
+      include top snippets in the prompt so the LLM can answer from the internet.
     - Robust handling of both new-style and old-style OpenAI python clients.
     - Safe: returns user-friendly message instead of raising on error.
     """
     if not OPENAI_API_KEY:
         return "I couldn't find an answer in the Bahrain data and no OpenAI API key is configured."
 
-    # build messages with optional short context
+    # attempt to get web snippets (optional)
+    web_snips = None
+    try:
+        web_snips = search_web_snippets(user_text, num_results=3)
+    except Exception:
+        LOG.exception("web search attempt failed")
+
+    # build messages with optional short context and web snippets
     system_prompt = (
         "You are a helpful statistics and market segmentation assistant focused on Bahrain. "
-        "If data is available, answer precisely. If no data, offer sensible reasoning and possible data sources."
+        "If data is available, answer precisely. If no data, indicate limitations and offer sensible reasoning and possible data sources. "
+        "When web snippets are provided, use them as source material and cite them inline (title or URL). Do NOT hallucinate facts."
     )
     messages = [{"role": "system", "content": system_prompt}]
     if agent_text and isinstance(agent_text, str) and agent_text.strip():
-        # give LLM the agent's raw text as context (short)
         messages.append({"role": "system", "content": f"Context from rule-based agent: {agent_text.strip()[:800]}"})
+    if web_snips:
+        messages.append({"role": "system", "content": f"Web search snippets (top results):\n{web_snips[:4000]}"})
     messages.append({"role": "user", "content": user_text})
 
     # Try new-style client first
@@ -368,14 +464,13 @@ def llm_fallback_answer(user_text: str, agent_text: Optional[str] = None) -> str
             choices = getattr(resp, "choices", None) or (resp.get("choices") if isinstance(resp, dict) else None)
             if choices and len(choices) > 0:
                 first = choices[0]
-                # object-like
                 if hasattr(first, "message") and hasattr(first.message, "content"):
                     return first.message.content.strip()
-                # dict-like
                 if isinstance(first, dict):
                     msg = first.get("message", {})
                     if isinstance(msg, dict) and "content" in msg:
                         return msg["content"].strip()
+
         # Next try old-style if present (some environments)
         if _have_old_chat and openai is not None and hasattr(openai, "ChatCompletion"):
             openai.api_key = OPENAI_API_KEY
@@ -384,6 +479,7 @@ def llm_fallback_answer(user_text: str, agent_text: Optional[str] = None) -> str
                 messages=messages,
                 max_tokens=800,
                 temperature=0.2,
+                request_timeout=OPENAI_TIMEOUT,
             )
             if resp2 and "choices" in resp2 and len(resp2["choices"]) > 0:
                 content = resp2["choices"][0].get("message", {}).get("content")
@@ -395,4 +491,3 @@ def llm_fallback_answer(user_text: str, agent_text: Optional[str] = None) -> str
 
     # If both attempts didn't return a valid string:
     return "I couldn't generate an answer at this time."
-
