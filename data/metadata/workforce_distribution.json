@@ -1,0 +1,37 @@
+{
+  "layer": "workforce_distribution.csv",
+  "n_rows": 20,
+  "n_columns": 6,
+  "columns": {
+    "year": {
+      "dtype": "int64"
+    },
+    "sector": {
+      "dtype": "object"
+    },
+    "job_role": {
+      "dtype": "float64"
+    },
+    "count": {
+      "dtype": "float64"
+    },
+    "area_name": {
+      "dtype": "object"
+    },
+    "company_type": {
+      "dtype": "object"
+    }
+  },
+  "updated_at_utc": "2025-11-30T04:25:58.532402Z",
+  "rows_before": 22,
+  "rows_incoming": 12,
+  "rows_after": 20,
+  "written_columns": [
+    "year",
+    "sector",
+    "job_role",
+    "count",
+    "area_name",
+    "company_type"
+  ]
+}

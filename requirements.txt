@@ -1,0 +1,47 @@
+# ================================
+# Bahrain Stats Agent - Requirements
+# ================================
+
+# Core utilities
+python-dotenv==1.0.1
+requests==2.31.0
+pandas==2.3.3
+numpy==1.26.4
+regex==2023.12.25
+python-dateutil==2.9.0.post0
+pyyaml==6.0.1
+
+# Web server components (Webhook + HTML UI)
+Flask==3.0.2
+Werkzeug==3.0.1
+
+# Ingestion automation (Directory watcher)
+watchdog==4.0.0
+
+# AI / LLM Integration
+openai==1.30.1
+
+# OpenAI tokenization (if using embeddings / token counting)
+tiktoken
+
+# Optional: Only needed if the client uses Gradio UI
+gradio==4.19.2
+
+# Logging & utilities
+rich==13.7.0
+
+# For CSV / Parquet
+pyarrow==15.0.0
+fastparquet==2024.1.0   # pin a compatible version (adjust if needed)
+
+# Machine Learning models
+scikit-learn==1.5.0
+
+# Plotting / dashboard
+plotly==5.19.0
+
+# Forecasting (platform-dependent: may need extra steps on Windows)
+prophet==1.1.4
+
+# Helpful utilities (optional)
+tqdm

@@ -1,0 +1,11 @@
+﻿Housing Type,نوع المسكن,Occupancy,الإشغال,Housing Unit
+Villa,فيلا,Vacant,شاغر,30779
+Conventional House,بيت شرقي,Vacant,شاغر,3033
+Traditional House,بيت تقليدي,Vacant,شاغر,1789
+Villa,فيلا,Occupied,مشغول,96142
+Others,أخرى,Occupied,مشغول,13182
+Others,أخرى,Vacant,شاغر,15323
+Flat,شقة,Vacant,شاغر,91403
+Flat,شقة,Occupied,مشغول,122048
+Conventional House,بيت شرقي,Occupied,مشغول,8135
+Traditional House,بيت تقليدي,Occupied,مشغول,5292

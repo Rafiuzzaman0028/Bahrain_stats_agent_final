@@ -1,0 +1,111 @@
+﻿Household Size,حجم الأسرة, Housing Type,نوع المسكن,Nationality,الجنسية,Household
+1,1,Flat,شقة,Bahraini Households,الأسر البحرينية,4053
+3,3,Flat,شقة,Bahraini Households,الأسر البحرينية,7036
+6,6,Flat,شقة,Bahraini Households,الأسر البحرينية,5304
+9,9,Flat,شقة,Bahraini Households,الأسر البحرينية,1303
+11,11,Flat,شقة,Bahraini Households,الأسر البحرينية,553
+12 & Above,12 فأكثر,Flat,شقة,Bahraini Households,الأسر البحرينية,1375
+1,1,Villa,فيلا,Bahraini Households,الأسر البحرينية,3894
+4,4,Villa,فيلا,Bahraini Households,الأسر البحرينية,10810
+5,5,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,738
+9,9,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,260
+11,11,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,142
+3,3,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,429
+6,6,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,358
+9,9,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,187
+11,11,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,99
+12 & Above,12 فأكثر,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,351
+2,2,Others,أخرى,Bahraini Households,الأسر البحرينية,218
+4,4,Others,أخرى,Bahraini Households,الأسر البحرينية,133
+7,7,Others,أخرى,Bahraini Households,الأسر البحرينية,23
+9,9,Others,أخرى,Bahraini Households,الأسر البحرينية,11
+10,10,Others,أخرى,Bahraini Households,الأسر البحرينية,5
+1,1,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,16595
+2,2,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,10540
+2,2,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,1714
+5,5,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,1037
+7,7,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,379
+5,5,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,143
+9,9,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,26
+6,6,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,48
+6,6,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,97
+10,10,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,13
+2,2,Flat,شقة,Bahraini Households,الأسر البحرينية,6323
+5,5,Flat,شقة,Bahraini Households,الأسر البحرينية,7466
+8,8,Flat,شقة,Bahraini Households,الأسر البحرينية,2079
+8,8,Villa,فيلا,Bahraini Households,الأسر البحرينية,6026
+3,3,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,617
+6,6,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,666
+7,7,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,499
+8,8,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,362
+10,10,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,161
+12 & Above,12 فأكثر,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,492
+5,5,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,420
+7,7,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,315
+8,8,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,240
+10,10,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,124
+1,1,Others,أخرى,Bahraini Households,الأسر البحرينية,518
+5,5,Others,أخرى,Bahraini Households,الأسر البحرينية,86
+3,3,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,9857
+6,6,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,3464
+9,9,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,1351
+1,1,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,2845
+6,6,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,633
+8,8,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,234
+10,10,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,188
+2,2,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,251
+3,3,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,183
+4,4,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,171
+6,6,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,73
+5,5,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,87
+8,8,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,43
+10,10,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,31
+1,1,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,6223
+2,2,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,2064
+3,3,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,1009
+4,4,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,681
+5,5,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,391
+8,8,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,28
+4,4,Flat,شقة,Bahraini Households,الأسر البحرينية,8174
+7,7,Flat,شقة,Bahraini Households,الأسر البحرينية,3402
+10,10,Flat,شقة,Bahraini Households,الأسر البحرينية,875
+2,2,Villa,فيلا,Bahraini Households,الأسر البحرينية,5877
+3,3,Villa,فيلا,Bahraini Households,الأسر البحرينية,7198
+5,5,Villa,فيلا,Bahraini Households,الأسر البحرينية,13553
+6,6,Villa,فيلا,Bahraini Households,الأسر البحرينية,12789
+7,7,Villa,فيلا,Bahraini Households,الأسر البحرينية,9048
+9,9,Villa,فيلا,Bahraini Households,الأسر البحرينية,3880
+10,10,Villa,فيلا,Bahraini Households,الأسر البحرينية,2723
+11,11,Villa,فيلا,Bahraini Households,الأسر البحرينية,2021
+12 & Above,12 فأكثر,Villa,فيلا,Bahraini Households,الأسر البحرينية,6766
+1,1,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,577
+2,2,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,629
+4,4,Conventional House,بيت شرقي,Bahraini Households,الأسر البحرينية,685
+1,1,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,460
+2,2,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,447
+4,4,Traditional House,بيت تقليدي,Bahraini Households,الأسر البحرينية,397
+3,3,Others,أخرى,Bahraini Households,الأسر البحرينية,146
+6,6,Others,أخرى,Bahraini Households,الأسر البحرينية,42
+8,8,Others,أخرى,Bahraini Households,الأسر البحرينية,9
+11,11,Others,أخرى,Bahraini Households,الأسر البحرينية,4
+12 & Above,12 فأكثر,Others,أخرى,Bahraini Households,الأسر البحرينية,13
+4,4,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,9209
+5,5,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,6203
+7,7,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,2451
+8,8,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,1834
+10,10,Flat,شقة,Non-Bahraini Households,الأسر غير البحرينية,1141
+3,3,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,1391
+4,4,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,1232
+9,9,Villa,فيلا,Non-Bahraini Households,الأسر غير البحرينية,208
+1,1,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,516
+7,7,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,43
+8,8,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,53
+10,10,Conventional House,بيت شرقي,Non-Bahraini Households,الأسر غير البحرينية,36
+1,1,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,320
+2,2,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,157
+3,3,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,118
+4,4,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,118
+7,7,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,38
+9,9,Traditional House,بيت تقليدي,Non-Bahraini Households,الأسر غير البحرينية,31
+7,7,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,58
+9,9,Others,أخرى,Non-Bahraini Households,الأسر غير البحرينية,25

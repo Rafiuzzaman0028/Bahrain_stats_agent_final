@@ -1,0 +1,73 @@
+﻿age_groups;fy_t_lsn;nationality;ljnsy;sex;ljns;population
+10 - 14;10 - 14;Bahraini;بحريني;Male;ذكر;36023
+15 - 19;15 - 19;Bahraini;بحريني;Male;ذكر;33001
+40 - 44;40 - 44;Bahraini;بحريني;Male;ذكر;21695
+60 - 64;60 - 64;Bahraini;بحريني;Male;ذكر;13012
+65 - 69;65 - 69;Bahraini;بحريني;Male;ذكر;9453
+70 - 74;70 - 74;Bahraini;بحريني;Male;ذكر;5192
+75 - 79;75 - 79;Bahraini;بحريني;Male;ذكر;2871
+85 Years & Above;85 سنة فأكثر;Bahraini;بحريني;Male;ذكر;1304
+45 - 49;45 - 49;Bahraini;بحريني;Female;أنثى;17386
+55 - 59;55 - 59;Bahraini;بحريني;Female;أنثى;16593
+70 - 74;70 - 74;Bahraini;بحريني;Female;أنثى;4633
+5 - 9;5 - 9;Non-Bahraini;غير بحريني;Male;ذكر;15035
+35 - 39;35 - 39;Non-Bahraini;غير بحريني;Male;ذكر;109772
+60 - 64;60 - 64;Non-Bahraini;غير بحريني;Male;ذكر;9406
+80 - 84;80 - 84;Non-Bahraini;غير بحريني;Male;ذكر;157
+10 - 14;10 - 14;Non-Bahraini;غير بحريني;Female;أنثى;11364
+20 - 24;20 - 24;Non-Bahraini;غير بحريني;Female;أنثى;11455
+25 - 29;25 - 29;Non-Bahraini;غير بحريني;Female;أنثى;25810
+60 - 64;60 - 64;Non-Bahraini;غير بحريني;Female;أنثى;3129
+75 - 79;75 - 79;Non-Bahraini;غير بحريني;Female;أنثى;264
+80 - 84;80 - 84;Non-Bahraini;غير بحريني;Female;أنثى;168
+0 - 4;0 - 4;Bahraini;بحريني;Male;ذكر;36052
+20 - 24;20 - 24;Bahraini;بحريني;Male;ذكر;31062
+30 - 34;30 - 34;Bahraini;بحريني;Male;ذكر;27542
+45 - 49;45 - 49;Bahraini;بحريني;Male;ذكر;17057
+50 - 54;50 - 54;Bahraini;بحريني;Male;ذكر;16169
+55 - 59;55 - 59;Bahraini;بحريني;Male;ذكر;15634
+5 - 9;5 - 9;Bahraini;بحريني;Female;أنثى;36790
+20 - 24;20 - 24;Bahraini;بحريني;Female;أنثى;29270
+25 - 29;25 - 29;Bahraini;بحريني;Female;أنثى;28869
+30 - 34;30 - 34;Bahraini;بحريني;Female;أنثى;26666
+35 - 39;35 - 39;Bahraini;بحريني;Female;أنثى;23825
+40 - 44;40 - 44;Bahraini;بحريني;Female;أنثى;21230
+60 - 64;60 - 64;Bahraini;بحريني;Female;أنثى;13224
+65 - 69;65 - 69;Bahraini;بحريني;Female;أنثى;7911
+75 - 79;75 - 79;Bahraini;بحريني;Female;أنثى;3099
+85 Years & Above;85 سنة فأكثر;Bahraini;بحريني;Female;أنثى;1756
+20 - 24;20 - 24;Non-Bahraini;غير بحريني;Male;ذكر;29644
+25 - 29;25 - 29;Non-Bahraini;غير بحريني;Male;ذكر;71027
+45 - 49;45 - 49;Non-Bahraini;غير بحريني;Male;ذكر;53410
+55 - 59;55 - 59;Non-Bahraini;غير بحريني;Male;ذكر;18864
+70 - 74;70 - 74;Non-Bahraini;غير بحريني;Male;ذكر;992
+75 - 79;75 - 79;Non-Bahraini;غير بحريني;Male;ذكر;345
+0 - 4;0 - 4;Non-Bahraini;غير بحريني;Female;أنثى;16161
+30 - 34;30 - 34;Non-Bahraini;غير بحريني;Female;أنثى;31091
+40 - 44;40 - 44;Non-Bahraini;غير بحريني;Female;أنثى;23155
+45 - 49;45 - 49;Non-Bahraini;غير بحريني;Female;أنثى;16123
+50 - 54;50 - 54;Non-Bahraini;غير بحريني;Female;أنثى;10701
+55 - 59;55 - 59;Non-Bahraini;غير بحريني;Female;أنثى;6502
+70 - 74;70 - 74;Non-Bahraini;غير بحريني;Female;أنثى;544
+5 - 9;5 - 9;Bahraini;بحريني;Male;ذكر;38543
+25 - 29;25 - 29;Bahraini;بحريني;Male;ذكر;30374
+35 - 39;35 - 39;Bahraini;بحريني;Male;ذكر;24311
+80 - 84;80 - 84;Bahraini;بحريني;Male;ذكر;1845
+0 - 4;0 - 4;Bahraini;بحريني;Female;أنثى;34851
+10 - 14;10 - 14;Bahraini;بحريني;Female;أنثى;34500
+15 - 19;15 - 19;Bahraini;بحريني;Female;أنثى;31250
+50 - 54;50 - 54;Bahraini;بحريني;Female;أنثى;17085
+80 - 84;80 - 84;Bahraini;بحريني;Female;أنثى;2284
+0 - 4;0 - 4;Non-Bahraini;غير بحريني;Male;ذكر;16539
+10 - 14;10 - 14;Non-Bahraini;غير بحريني;Male;ذكر;11789
+15 - 19;15 - 19;Non-Bahraini;غير بحريني;Male;ذكر;8061
+30 - 34;30 - 34;Non-Bahraini;غير بحريني;Male;ذكر;126673
+40 - 44;40 - 44;Non-Bahraini;غير بحريني;Male;ذكر;73409
+50 - 54;50 - 54;Non-Bahraini;غير بحريني;Male;ذكر;33452
+65 - 69;65 - 69;Non-Bahraini;غير بحريني;Male;ذكر;3046
+85 Years & Above;85 سنة فأكثر;Non-Bahraini;غير بحريني;Male;ذكر;134
+5 - 9;5 - 9;Non-Bahraini;غير بحريني;Female;أنثى;14626
+15 - 19;15 - 19;Non-Bahraini;غير بحريني;Female;أنثى;7026
+35 - 39;35 - 39;Non-Bahraini;غير بحريني;Female;أنثى;27969
+65 - 69;65 - 69;Non-Bahraini;غير بحريني;Female;أنثى;1289
+85 Years & Above;85 سنة فأكثر;Non-Bahraini;غير بحريني;Female;أنثى;141

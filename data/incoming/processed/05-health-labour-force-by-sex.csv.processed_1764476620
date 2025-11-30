@@ -1,0 +1,61 @@
+﻿N, Year,المؤشر,Indicator ,الجنس,Sex,البيان Data 
+1.0,2015,الأطباء البشريون,Physicians,ذكور,Males,1044.0
+2.0,2016,الأطباء البشريون,Physicians,ذكور,Males,1064.0
+3.0,2017,الأطباء البشريون,Physicians,ذكور,Males,1067.0
+4.0,2021,الأطباء البشريون,Physicians,ذكور,Males,1868.0
+5.0,2015,الأطباء البشريون,Physicians,إناث,Females,1111.0
+6.0,2016,الأطباء البشريون,Physicians,إناث,Females,1078.0
+7.0,2017,الأطباء البشريون,Physicians,إناث,Females,1084.0
+8.0,2021,الأطباء البشريون,Physicians,إناث,Females,2095.0
+9.0,2015,أطباء الأسنان,Dentists,ذكور,Males,108.0
+10.0,2016,أطباء الأسنان,Dentists,ذكور,Males,108.0
+11.0,2017,أطباء الأسنان,Dentists,ذكور,Males,105.0
+12.0,2021,أطباء الأسنان,Dentists,ذكور,Males,427.0
+13.0,2015,أطباء الأسنان,Dentists,إناث,Females,122.0
+14.0,2016,أطباء الأسنان,Dentists,إناث,Females,128.0
+15.0,2017,أطباء الأسنان,Dentists,إناث,Females,122.0
+16.0,2021,أطباء الأسنان,Dentists,إناث,Females,610.0
+17.0,2015,هيئة التمريض,Nursing Staff,ذكور,Males,608.0
+18.0,2016,هيئة التمريض,Nursing Staff,ذكور,Males,611.0
+19.0,2017,هيئة التمريض,Nursing Staff,ذكور,Males,627.0
+20.0,2021,هيئة التمريض,Nursing Staff,ذكور,Males,1358.0
+21.0,2015,هيئة التمريض,Nursing Staff,إناث,Females,4696.0
+22.0,2016,هيئة التمريض,Nursing Staff,إناث,Females,4696.0
+23.0,2017,هيئة التمريض,Nursing Staff,إناث,Females,4676.0
+24.0,2021,هيئة التمريض,Nursing Staff,إناث,Females,7622.0
+25.0,2015,الصيادلة,Pharmasists,ذكور,Males,89.0
+26.0,2016,الصيادلة,Pharmasists,ذكور,Males,98.0
+27.0,2017,الصيادلة,Pharmasists,ذكور,Males,99.0
+28.0,2021,الصيادلة,Pharmasists,ذكور,Males,731.0
+29.0,2015,الصيادلة,Pharmasists,إناث,Females,266.0
+30.0,2016,الصيادلة,Pharmasists,إناث,Females,273.0
+31.0,2017,الصيادلة,Pharmasists,إناث,Females,274.0
+32.0,2021,الصيادلة,Pharmasists,إناث,Females,759.0
+33.0,2015,الفئات الطبية المساعدة,Other Para- Medical Staff,ذكور,Males,567.0
+34.0,2016,الفئات الطبية المساعدة,Other Para- Medical Staff,ذكور,Males,555.0
+35.0,2017,الفئات الطبية المساعدة,Other Para- Medical Staff,ذكور,Males,547.0
+36.0,2021,الفئات الطبية المساعدة,Other Para- Medical Staff,ذكور,Males,1060.0
+37.0,2015,الفئات الطبية المساعدة,Other Para- Medical Staff,إناث,Females,1052.0
+38.0,2016,الفئات الطبية المساعدة,Other Para- Medical Staff,إناث,Females,1041.0
+39.0,2017,الفئات الطبية المساعدة,Other Para- Medical Staff,إناث,Females,1043.0
+40.0,2021,الفئات الطبية المساعدة,Other Para- Medical Staff,إناث,Females,2142.0
+41.0,2022,الأطباء البشريون,Physicians,ذكور,Males,1917.0
+42.0,2022,الأطباء البشريون,Physicians,إناث,Females,1951.0
+43.0,2022,أطباء الأسنان,Dentists,ذكور,Males,449.0
+44.0,2022,أطباء الأسنان,Dentists,إناث,Females,544.0
+45.0,2022,هيئة التمريض,Nursing Staff,ذكور,Males,1470.0
+46.0,2022,هيئة التمريض,Nursing Staff,إناث,Females,8033.0
+47.0,2022,الصيادلة,Pharmasists,ذكور,Males,783.0
+48.0,2022,الصيادلة,Pharmasists,إناث,Females,845.0
+49.0,2022,الفئات الطبية المساعدة,Other Para- Medical Staff,ذكور,Males,215.0
+50.0,2022,الفئات الطبية المساعدة,Other Para- Medical Staff,إناث,Females,409.0
+51.0,2023,الأطباء البشريون,Physicians,ذكور,Males,2058.0
+52.0,2023,الأطباء البشريون,Physicians,إناث,Females,2210.0
+53.0,2023,أطباء الأسنان,Dentists,ذكور,Males,263.0
+54.0,2023,أطباء الأسنان,Dentists,إناث,Females,479.0
+55.0,2023,هيئة التمريض,Nursing Staff,ذكور,Males,1704.0
+56.0,2023,هيئة التمريض,Nursing Staff,إناث,Females,8122.0
+57.0,2023,الصيادلة,Pharmasists,ذكور,Males,795.0
+58.0,2023,الصيادلة,Pharmasists,إناث,Females,991.0
+59.0,2023,الفئات الطبية المساعدة,Other Para- Medical Staff,ذكور,Males,283.0
+60.0,2023,الفئات الطبية المساعدة,Other Para- Medical Staff,إناث,Females,623.0

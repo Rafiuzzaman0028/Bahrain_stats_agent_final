@@ -1,0 +1,170 @@
+{
+  "notes": "Add new endpoints to the 'endpoints' array. Each entry can be a string URL or an object {\"url\": \"...\", \"headers\": {...}}. Replace placeholder URLs with the real export links (use /exports/csv when available).",
+  "endpoints": [
+    {
+      "url": "https://data.gov.bh/api/explore/v2.1/catalog/datasets/01-population-by-nationality-sex-agegroups/exports/csv",
+      "description": "Population by nationality, sex, agegroups (CSV export)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/population-by-sex-age-groups-and-religion-census-2020/exports/csv",
+      "description": "Labour dataset CSV export (replace this placeholder with the real export URL)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/population-by-age-groups-nationality-and-sex-census-2020/exports/csv",
+      "description": "Occupation workers dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/private-households-by-household-size-and-housing-type-census-2020/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/private-households-by-governorate-and-household-nationality-census-2020/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/04-population-density-by-governorate/exports/csv",
+      "description": "Population density dataset CSV export (replace placeholder if different from population)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/distribution-households-by-governorate-and-nationality-of-households-census-2020/exports/csv",
+      "description": "Housing units dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/distribution-of-average-households-by-governorate-and-nationality-of-households-/exports/csv",
+      "description": "Housing units dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/economically-active-population-15-years-and-above-by-age-groups-nationality-and-/exports/csv",
+      "description": "Population by nationality, sex, agegroups (CSV export)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/12-school-students-by-level-type-of-school-and-sex-12/exports/csv",
+      "description": "Teachers dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/02-number-of-teachers-in-governmental-schools-by-type-of-school-and-sex/exports/csv",
+      "description": "Higher education dataset CSV export (replace placeholder)"
+    },
+
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/school-enrolled-population-3-years-and-above-by-governorate-nationality-and-sex-/exports/csv",
+      "description": "Higher education dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/population-15-years-and-above-by-governorate-and-labour-force-participation-cens/exports/csv",
+      "description": "Labour dataset CSV export (replace this placeholder with the real export URL)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/buildings-by-ownership-type-and-governorate-census-2020/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/housing-units-by-housing-type-and-governorate-census-2020/exports/csv",
+      "description": "Housing units dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/buildings-by-building-type-and-governorate-census-2020/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/buildings-by-building-current-usage-and-governorate-census-2020/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/06-number-of-protected-homes/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/workers-covered-by-social-insurance-system-private-sector-by-monthly-wage-groups/exports/csv",
+      "description": "Labour dataset CSV export (replace this placeholder with the real export URL)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/23-hec_students-in-higher-education-institutions-by-academic-programme-sex0/exports/csv",
+      "description": "Higher education dataset CSV export (replace placeholder)"
+    },    
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/private-households-by-household-size-and-governorate-census-2020/exports/csv",
+      "description": "Housing units dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/total-households-by-governorate-and-type-of-household-census-2020/exports/csv",
+      "description": "Housing units dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/work-injuries-for-workers-covered-by-social-insurance-system/exports/csv",
+      "description": "Labour dataset CSV export (replace this placeholder with the real export URL)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/number-of-job-seekers-by-highest-education-level/exports/csv",
+      "description": "Higher education dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/population-15-years-and-above-by-sex-labour-force-participation-and-marital-stat/exports/csv",
+      "description": "Labour dataset CSV export (replace this placeholder with the real export URL)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/lmra2-new-work-permits-and-renewal-of-work-permits-by-transaction-type/exports/csv",
+      "description": "Occupation workers dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/lmra1-active-work-permits-for-expatriate/exports/csv",
+      "description": "Labour dataset CSV export (replace this placeholder with the real export URL)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/job-seekers/exports/csv",
+      "description": "Occupation workers dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/housing-units-by-housing-type-and-occupancy-census-2020/exports/csv",
+      "description": "Housing units dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/10-annually-compensation-of-employees-kp-value/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/hotels-and-apartments/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/estimated-workers/exports/csv",
+      "description": "Labour dataset CSV export (replace this placeholder with the real export URL)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/change-in-the-number-of-recruitment/exports/csv",
+      "description": "Occupation workers dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/private-households-by-governorate-and-household-nationality-census-2020/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/working-population-15-years-and-above-by-age-groups-and-employment-status-census/exports/csv",
+      "description": "Housing units dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/total-households-by-governorate-and-type-of-household-census-2020/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/working-population-15-years-and-above-by-employment-status-nationality-and-sex-c/exports/csv",
+      "description": "Occupation workers dataset CSV export (replace placeholder)"
+    },
+
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/distribution-population-by-governorate-and-nationality-of-households-census-2020/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/health-services/exports/csv",
+      "description": "Labour dataset CSV export (replace this placeholder with the real export URL)"
+    },
+    {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/27-pedestrian-classified-by-seriousness-of-injury-and-sex/exports/csv",
+      "description": "Households dataset CSV export (replace placeholder)"
+    }
+
+  ],
+
+  "add_new_here": "To add new endpoints: edit this file and append either a string URL or an object with {\"url\": \"...\", \"headers\": {...}, \"description\": \"...\"}. For endpoints that require headers (Authorization), pass them in the headers object. Example: {\"url\": \"https://api.example.com/export.csv\", \"headers\": {\"Authorization\": \"Bearer TOKEN\"}}"
+}

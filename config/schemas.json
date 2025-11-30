@@ -1,0 +1,45 @@
+{
+  "masters": {
+    "domestic_permits.csv": {
+      "required": ["year", "permit_id", "status"],
+      "schema": ["year", "period", "permit_id", "status", "job_role", "nationality", "employer_id", "area_name", "avg_salary", "recruitment_fee", "notes"]
+    },
+    "employer_households.csv": {
+      "required": ["year", "household_id", "num_domestic_workers"],
+      "schema": ["year", "household_id", "num_domestic_workers", "avg_workers_per_household", "area_name"]
+    },
+    "footfall.csv": {
+      "required": ["date", "area_name", "footfall_visits"],
+      "schema": ["date", "period", "area_name", "area_code", "footfall_visits", "footfall_unique_devices", "avg_dwell_time_seconds", "movement_direction"]
+    },
+    "mobility.csv": {
+      "required": ["date", "area_code", "footfall_visits"],
+      "schema": ["date", "period", "area_name", "area_code", "footfall_visits", "footfall_unique_devices", "avg_dwell_time_seconds", "origin_area_code", "destination_area_code"]
+    }
+  },
+  "filename_keywords": {
+    "domestic": "domestic_permits.csv",
+    "permit": "domestic_permits.csv",
+    "permits": "domestic_permits.csv",
+    "footfall": "footfall.csv",
+    "mobility": "mobility.csv",
+    "movement": "mobility.csv",
+    "household": "employer_households.csv"
+  },
+  "hints": {
+    "permit_id": ["permit_id", "id_permit", "domestic_id", "permitno"],
+    "status": ["status", "permit_status", "application_status"],
+    "job_role": ["job_role", "job", "occupation", "role", "position"],
+    "avg_salary": ["avg_salary", "salary", "monthly_salary", "wage"],
+    "recruitment_fee": ["recruitment_fee", "agency_fee", "rec_fee"],
+    "area_name": ["area_name", "area", "location"],
+    "area_code": ["area_code", "areaid"],
+    "footfall_visits": ["footfall_visits", "visits", "visitor_count"],
+    "footfall_unique_devices": ["unique_devices", "device_count", "devices"],
+    "avg_dwell_time_seconds": ["avg_dwell_time_seconds", "avg_dwell", "dwell_seconds"],
+    "origin_area_code": ["origin_area_code", "from_area"],
+    "destination_area_code": ["destination_area_code", "to_area"],
+    "household_id": ["household_id", "hh_id"],
+    "num_domestic_workers": ["num_domestic_workers", "domestic_workers_count", "num_workers_per_household"]
+  }
+}

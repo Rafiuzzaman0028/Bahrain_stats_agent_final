@@ -1,0 +1,57 @@
+{
+  "layer": "domestic_permits.csv",
+  "n_rows": 4,
+  "n_columns": 11,
+  "columns": {
+    "year": {
+      "dtype": "int64"
+    },
+    "period": {
+      "dtype": "object"
+    },
+    "permit_id": {
+      "dtype": "object"
+    },
+    "status": {
+      "dtype": "object"
+    },
+    "job_role": {
+      "dtype": "object"
+    },
+    "nationality": {
+      "dtype": "object"
+    },
+    "employer_id": {
+      "dtype": "object"
+    },
+    "area_name": {
+      "dtype": "object"
+    },
+    "avg_salary": {
+      "dtype": "float64"
+    },
+    "recruitment_fee": {
+      "dtype": "float64"
+    },
+    "notes": {
+      "dtype": "object"
+    }
+  },
+  "updated_at_utc": "2025-11-30T04:25:58.516018Z",
+  "rows_before": 4,
+  "rows_incoming": 28,
+  "rows_after": 4,
+  "written_columns": [
+    "year",
+    "period",
+    "permit_id",
+    "status",
+    "job_role",
+    "nationality",
+    "employer_id",
+    "area_name",
+    "avg_salary",
+    "recruitment_fee",
+    "notes"
+  ]
+}

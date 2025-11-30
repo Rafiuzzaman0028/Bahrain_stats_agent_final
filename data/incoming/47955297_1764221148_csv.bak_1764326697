@@ -1,0 +1,67 @@
+﻿age_groups;fy_t_lsn;employment_status;lhl_l_mly;sex;ljns;population
+60 - 64;60 - 64;Employer;صاحب عمل;Male;ذكر;2194
+45 - 49;45 - 49;Self Employed;يعمل لحسابه;Male;ذكر;1137
+55 - 59;55 - 59;Self Employed;يعمل لحسابه;Male;ذكر;1463
+65 Years & Above;65 سنة فأكثر;Self Employed;يعمل لحسابه;Male;ذكر;2904
+15 - 19;15 - 19;Paid Employee;يعمل بأجر;Male;ذكر;2509
+50 - 54;50 - 54;Paid Employee;يعمل بأجر;Male;ذكر;40888
+20 - 24;20 - 24;Employer;صاحب عمل;Female;أنثى;240
+25 - 29;25 - 29;Employer;صاحب عمل;Female;أنثى;808
+30 - 34;30 - 34;Employer;صاحب عمل;Female;أنثى;1138
+35 - 39;35 - 39;Employer;صاحب عمل;Female;أنثى;1415
+55 - 59;55 - 59;Employer;صاحب عمل;Female;أنثى;1616
+40 - 44;40 - 44;Self Employed;يعمل لحسابه;Female;أنثى;1597
+45 - 49;45 - 49;Self Employed;يعمل لحسابه;Female;أنثى;1653
+25 - 29;25 - 29;Paid Employee;يعمل بأجر;Female;أنثى;29888
+30 - 34;30 - 34;Paid Employee;يعمل بأجر;Female;أنثى;33173
+35 - 39;35 - 39;Paid Employee;يعمل بأجر;Female;أنثى;28820
+50 - 54;50 - 54;Paid Employee;يعمل بأجر;Female;أنثى;11216
+15 - 19;15 - 19;Employer;صاحب عمل;Male;ذكر;35
+20 - 24;20 - 24;Employer;صاحب عمل;Male;ذكر;320
+25 - 29;25 - 29;Employer;صاحب عمل;Male;ذكر;854
+30 - 34;30 - 34;Employer;صاحب عمل;Male;ذكر;1456
+40 - 44;40 - 44;Employer;صاحب عمل;Male;ذكر;1991
+45 - 49;45 - 49;Employer;صاحب عمل;Male;ذكر;1938
+50 - 54;50 - 54;Employer;صاحب عمل;Male;ذكر;1918
+25 - 29;25 - 29;Self Employed;يعمل لحسابه;Male;ذكر;458
+30 - 34;30 - 34;Self Employed;يعمل لحسابه;Male;ذكر;620
+35 - 39;35 - 39;Self Employed;يعمل لحسابه;Male;ذكر;775
+50 - 54;50 - 54;Self Employed;يعمل لحسابه;Male;ذكر;1206
+20 - 24;20 - 24;Paid Employee;يعمل بأجر;Male;ذكر;39567
+25 - 29;25 - 29;Paid Employee;يعمل بأجر;Male;ذكر;91645
+30 - 34;30 - 34;Paid Employee;يعمل بأجر;Male;ذكر;147389
+40 - 44;40 - 44;Paid Employee;يعمل بأجر;Male;ذكر;86466
+45 - 49;45 - 49;Paid Employee;يعمل بأجر;Male;ذكر;62223
+60 - 64;60 - 64;Paid Employee;يعمل بأجر;Male;ذكر;12123
+40 - 44;40 - 44;Employer;صاحب عمل;Female;أنثى;1578
+45 - 49;45 - 49;Employer;صاحب عمل;Female;أنثى;1530
+15 - 19;15 - 19;Self Employed;يعمل لحسابه;Female;أنثى;11
+20 - 24;20 - 24;Self Employed;يعمل لحسابه;Female;أنثى;151
+25 - 29;25 - 29;Self Employed;يعمل لحسابه;Female;أنثى;601
+30 - 34;30 - 34;Self Employed;يعمل لحسابه;Female;أنثى;942
+60 - 64;60 - 64;Self Employed;يعمل لحسابه;Female;أنثى;1752
+65 Years & Above;65 سنة فأكثر;Self Employed;يعمل لحسابه;Female;أنثى;2279
+20 - 24;20 - 24;Paid Employee;يعمل بأجر;Female;أنثى;10368
+45 - 49;45 - 49;Paid Employee;يعمل بأجر;Female;أنثى;16316
+55 - 59;55 - 59;Paid Employee;يعمل بأجر;Female;أنثى;6837
+65 Years & Above;65 سنة فأكثر;Paid Employee;يعمل بأجر;Female;أنثى;1555
+35 - 39;35 - 39;Employer;صاحب عمل;Male;ذكر;1813
+55 - 59;55 - 59;Employer;صاحب عمل;Male;ذكر;2128
+65 Years & Above;65 سنة فأكثر;Employer;صاحب عمل;Male;ذكر;3949
+15 - 19;15 - 19;Self Employed;يعمل لحسابه;Male;ذكر;7
+20 - 24;20 - 24;Self Employed;يعمل لحسابه;Male;ذكر;174
+40 - 44;40 - 44;Self Employed;يعمل لحسابه;Male;ذكر;1144
+60 - 64;60 - 64;Self Employed;يعمل لحسابه;Male;ذكر;1355
+35 - 39;35 - 39;Paid Employee;يعمل بأجر;Male;ذكر;127264
+55 - 59;55 - 59;Paid Employee;يعمل بأجر;Male;ذكر;24322
+65 Years & Above;65 سنة فأكثر;Paid Employee;يعمل بأجر;Male;ذكر;6363
+15 - 19;15 - 19;Employer;صاحب عمل;Female;أنثى;32
+50 - 54;50 - 54;Employer;صاحب عمل;Female;أنثى;1599
+60 - 64;60 - 64;Employer;صاحب عمل;Female;أنثى;1379
+65 Years & Above;65 سنة فأكثر;Employer;صاحب عمل;Female;أنثى;1680
+35 - 39;35 - 39;Self Employed;يعمل لحسابه;Female;أنثى;1224
+50 - 54;50 - 54;Self Employed;يعمل لحسابه;Female;أنثى;1847
+55 - 59;55 - 59;Self Employed;يعمل لحسابه;Female;أنثى;1963
+15 - 19;15 - 19;Paid Employee;يعمل بأجر;Female;أنثى;511
+40 - 44;40 - 44;Paid Employee;يعمل بأجر;Female;أنثى;23556
+60 - 64;60 - 64;Paid Employee;يعمل بأجر;Female;أنثى;3215

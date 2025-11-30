@@ -1,0 +1,31 @@
+﻿Building Type,نوع المبنى, Governorate,المحافظة,Buildings
+Villa,فيلا,Capital,العاصمة,31558
+Villa,فيلا,Northern,الشمالية,53085
+Conventional House,بيت شرقي,Muharraq,المحرق,3301
+Conventional House,بيت شرقي,Northern,الشمالية,2298
+Conventional House,بيت شرقي,Southern,الجنوبية,2148
+Traditional House,بيت تقليدي,Northern,الشمالية,1030
+Traditional House,بيت تقليدي,Southern,الجنوبية,614
+Shop / Store,دكان / مخزن,Northern,الشمالية,18478
+Shop / Store,دكان / مخزن,Southern,الجنوبية,12947
+Establishment Building,مبنى مؤسسة,Northern,الشمالية,1809
+Others,أخرى,Northern,الشمالية,1042
+Others,أخرى,Southern,الجنوبية,916
+#REF!,#REF!,#REF!,#REF!,
+Apartment Building,عمارة,Capital,العاصمة,15703
+Apartment Building,عمارة,Muharraq,المحرق,6656
+Apartment Building,عمارة,Southern,الجنوبية,5524
+Conventional House,بيت شرقي,Capital,العاصمة,4431
+Traditional House,بيت تقليدي,Muharraq,المحرق,4335
+Establishment Building,مبنى مؤسسة,Capital,العاصمة,3121
+Establishment Building,مبنى مؤسسة,Southern,الجنوبية,1596
+العاصمة   Capital,المحرق   Muharraq,الشمالية   Northern,الجنوبية   Southern,
+Apartment Building,عمارة,Northern,الشمالية,7240
+Villa,فيلا,Muharraq,المحرق,25826
+Villa,فيلا,Southern,الجنوبية,26815
+Traditional House,بيت تقليدي,Capital,العاصمة,1561
+Shop / Store,دكان / مخزن,Capital,العاصمة,26969
+Shop / Store,دكان / مخزن,Muharraq,المحرق,12208
+Establishment Building,مبنى مؤسسة,Muharraq,المحرق,1227
+Others,أخرى,Capital,العاصمة,1078
+Others,أخرى,Muharraq,المحرق,1217

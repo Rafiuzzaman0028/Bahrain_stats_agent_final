@@ -1,0 +1,45 @@
+{
+  "layer": "footfall.csv",
+  "n_rows": 2108,
+  "n_columns": 8,
+  "columns": {
+    "date": {
+      "dtype": "float64"
+    },
+    "period": {
+      "dtype": "object"
+    },
+    "area_name": {
+      "dtype": "object"
+    },
+    "area_code": {
+      "dtype": "object"
+    },
+    "footfall_visits": {
+      "dtype": "float64"
+    },
+    "footfall_unique_devices": {
+      "dtype": "object"
+    },
+    "avg_dwell_time_seconds": {
+      "dtype": "object"
+    },
+    "movement_direction": {
+      "dtype": "object"
+    }
+  },
+  "updated_at_utc": "2025-11-30T04:25:58.562701Z",
+  "rows_before": 2108,
+  "rows_incoming": 155,
+  "rows_after": 2108,
+  "written_columns": [
+    "date",
+    "period",
+    "area_name",
+    "area_code",
+    "footfall_visits",
+    "footfall_unique_devices",
+    "avg_dwell_time_seconds",
+    "movement_direction"
+  ]
+}

@@ -1,0 +1,97 @@
+﻿Household Size,حجم الأسرة,Governorate,المحافظة,Nationality,الجنسية,Household
+1,1,Capital,العاصمة,Bahraini Households,الأسر البحرينية,3134
+2,2,Capital,العاصمة,Bahraini Households,الأسر البحرينية,4178
+4,4,Capital,العاصمة,Bahraini Households,الأسر البحرينية,5514
+9,9,Capital,العاصمة,Bahraini Households,الأسر البحرينية,1136
+2,2,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,2828
+4,4,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,4057
+7,7,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,2939
+9,9,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,1255
+7,7,Northern,الشمالية,Bahraini Households,الأسر البحرينية,4655
+8,8,Northern,الشمالية,Bahraini Households,الأسر البحرينية,2954
+9,9,Northern,الشمالية,Bahraini Households,الأسر البحرينية,1960
+3,3,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,2771
+4,4,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,3564
+6,6,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,3631
+11,11,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,674
+6,6,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,2256
+7,7,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,1623
+3,3,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,1678
+5,5,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,1395
+6,6,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,858
+9,9,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,363
+1,1,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,3644
+7,7,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,319
+6,6,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,675
+7,7,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,468
+11,11,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,0
+3,3,Capital,العاصمة,Bahraini Households,الأسر البحرينية,4530
+10,10,Capital,العاصمة,Bahraini Households,الأسر البحرينية,759
+11,11,Capital,العاصمة,Bahraini Households,الأسر البحرينية,595
+1,1,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,2255
+3,3,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,3250
+8,8,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,1921
+11,11,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,560
+12 & Above,12 فأكثر,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,1480
+3,3,Northern,الشمالية,Bahraini Households,الأسر البحرينية,4875
+4,4,Northern,الشمالية,Bahraini Households,الأسر البحرينية,7064
+11,11,Northern,الشمالية,Bahraini Households,الأسر البحرينية,990
+12 & Above,12 فأكثر,Northern,الشمالية,Bahraini Households,الأسر البحرينية,3802
+2,2,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,2527
+5,5,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,3943
+8,8,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,1972
+12 & Above,12 فأكثر,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,1973
+1,1,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,15028
+3,3,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,7791
+4,4,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,6977
+5,5,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,4374
+8,8,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,1166
+9,9,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,795
+10,10,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,654
+2,2,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,2162
+4,4,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,1708
+12 & Above,12 فأكثر,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,0
+2,2,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,1847
+4,4,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,1285
+5,5,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,1057
+9,9,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,186
+10,10,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,151
+11,11,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,0
+2,2,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,1873
+3,3,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,1554
+4,4,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,1441
+5,5,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,1035
+9,9,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,297
+12 & Above,12 فأكثر,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,0
+5,5,Capital,العاصمة,Bahraini Households,الأسر البحرينية,5759
+6,6,Capital,العاصمة,Bahraini Households,الأسر البحرينية,4633
+7,7,Capital,العاصمة,Bahraini Households,الأسر البحرينية,3003
+8,8,Capital,العاصمة,Bahraini Households,الأسر البحرينية,1869
+12 & Above,12 فأكثر,Capital,العاصمة,Bahraini Households,الأسر البحرينية,1742
+5,5,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,4434
+6,6,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,3703
+10,10,Muharraq,المحرق,Bahraini Households,الأسر البحرينية,780
+1,1,Northern,الشمالية,Bahraini Households,الأسر البحرينية,2247
+2,2,Northern,الشمالية,Bahraini Households,الأسر البحرينية,3961
+5,5,Northern,الشمالية,Bahraini Households,الأسر البحرينية,8127
+6,6,Northern,الشمالية,Bahraini Households,الأسر البحرينية,7192
+10,10,Northern,الشمالية,Bahraini Households,الأسر البحرينية,1362
+1,1,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,1866
+7,7,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,2690
+9,9,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,1290
+10,10,Southern,الجنوبية,Bahraini Households,الأسر البحرينية,987
+2,2,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,8844
+11,11,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,0
+12 & Above,12 فأكثر,Capital,العاصمة,Non-Bahraini Households,الأسر غير البحرينية,0
+1,1,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,4217
+7,7,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,559
+8,8,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,431
+10,10,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,323
+11,11,Muharraq,المحرق,Non-Bahraini Households,الأسر غير البحرينية,0
+3,3,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,1535
+6,6,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,526
+8,8,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,228
+12 & Above,12 فأكثر,Northern,الشمالية,Non-Bahraini Households,الأسر غير البحرينية,0
+1,1,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,3610
+8,8,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,367
+10,10,Southern,الجنوبية,Non-Bahraini Households,الأسر غير البحرينية,281

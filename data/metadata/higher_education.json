@@ -1,0 +1,41 @@
+{
+  "layer": "higher_education.csv",
+  "n_rows": 44,
+  "n_columns": 7,
+  "columns": {
+    "year": {
+      "dtype": "float64"
+    },
+    "sector": {
+      "dtype": "object"
+    },
+    "academic_programme": {
+      "dtype": "object"
+    },
+    "students": {
+      "dtype": "float64"
+    },
+    "academic_year": {
+      "dtype": "object"
+    },
+    "sex": {
+      "dtype": "object"
+    },
+    "value": {
+      "dtype": "float64"
+    }
+  },
+  "updated_at_utc": "2025-11-30T04:25:58.019083Z",
+  "rows_before": 44,
+  "rows_incoming": 48,
+  "rows_after": 44,
+  "written_columns": [
+    "year",
+    "sector",
+    "academic_programme",
+    "students",
+    "academic_year",
+    "sex",
+    "value"
+  ]
+}

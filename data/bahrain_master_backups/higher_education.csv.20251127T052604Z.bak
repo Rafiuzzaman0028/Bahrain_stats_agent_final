@@ -1,0 +1,45 @@
+year,sector,academic_programme,students,academic_year,sex,value
+,Government,Short-Cycle Higher Education (Diploma),,2018/2019,Female,1591.0
+,Government,Bachelor’s or equivalent level,,2018/2019,Male,10688.0
+,Government,Master’s or equivalent level,,2018/2019,Male,402.0
+,Private,Master’s or equivalent level,,2018/2019,Female,508.0
+,Private,Doctoral,,2018/2019,Male,11.0
+,Private,Bachelor’s or equivalent level,,2019/2020,Male,6583.0
+,Private,Master’s or equivalent level,,2019/2020,Female,534.0
+,Private,Doctoral,,2019/2020,Male,12.0
+,Private,Doctoral,,2019/2020,Female,12.0
+,Government,Master’s or equivalent level,,2020/2021,Female,1122.0
+,Private,Short-Cycle Higher Education (Diploma),,2020/2021,Male,93.0
+,Private,Short-Cycle Higher Education (Diploma),,2020/2021,Female,81.0
+,Private,Bachelor’s or equivalent level,,2020/2021,Female,6615.0
+,Private,Doctoral,,2020/2021,Female,12.0
+,Government,Short-Cycle Higher Education (Diploma),,2021/2022,Female,2522.0
+,Government,Master’s or equivalent level,,2021/2022,Female,1761.0
+,Government,Doctoral,,2021/2022,Male,111.0
+,Private,Master’s or equivalent level,,2021/2022,Female,595.0
+,Government,Bachelor’s or equivalent level,,2022/2023,Male,12728.0
+,Government,Master’s or equivalent level,,2022/2023,Male,471.0
+2019.0,Government,nan,4.0,nan,nan,
+2019.0,Private,nan,8.0,nan,nan,
+2020.0,Government,nan,12.0,nan,nan,
+2020.0,Private,nan,16.0,nan,nan,
+2021.0,Government,nan,20.0,nan,nan,
+2021.0,Private,nan,24.0,nan,nan,
+2022.0,Government,nan,28.0,nan,nan,
+2022.0,Private,nan,32.0,nan,nan,
+2023.0,Government,nan,36.0,nan,nan,
+2023.0,Private,nan,40.0,nan,nan,
+2024.0,Government,nan,44.0,nan,nan,
+2024.0,Private,nan,48.0,nan,nan,
+2019.0,Government,,4.0,,,
+2019.0,Private,,8.0,,,
+2020.0,Government,,12.0,,,
+2020.0,Private,,16.0,,,
+2021.0,Government,,20.0,,,
+2021.0,Private,,24.0,,,
+2022.0,Government,,28.0,,,
+2022.0,Private,,32.0,,,
+2023.0,Government,,36.0,,,
+2023.0,Private,,40.0,,,
+2024.0,Government,,44.0,,,
+2024.0,Private,,48.0,,,
